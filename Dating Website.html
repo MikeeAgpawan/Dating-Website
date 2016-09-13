@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!--JQuery -->
+    <link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css"
+          rel="stylesheet" type="text/css" />
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+
+    <meta charset="UTF-8">
+    <title>Build-A-Bae</title>
+    <center><header>Build-A-Bae</header></center>
+
+<!--CSS Connection-->
+    <link rel="stylesheet" type="text/css" href="CSS.css">
+
+</head>
+
+
+<body>
+<h2 align="center"> Please Enter Your Details For Our Dating Website </h2>
+
+
+<!--Your Face-->
+<fieldset>
+ <legend> Your Face </legend>
+ <label for="Your Image">Your Image:</label>
+ <input id="Your Image" type='file' onchange="readURL (this);" required> <br>
+
+ <br>
+
+ <label for="preview">Image Preview:</label>
+ <img id="preview" src="#" alt="Your Image">
+
+</fieldset>
+
+
+<!--Your General Details-->
+<fieldset>
+ <legend> Your general Details </legend>
+ <label>Name</label>
+ <input type="text"
+        name="Name"
+        id="Name"
+        required>
+
+ <br>
+
+ <label for="sex">Gender</label>
+ <input type="radio" id="sex" name="Male" class="contactinfo" required>Male
+ <input type="radio" name="Female" class="contactinfo" required> Female
+
+ <br>
+
+ <label>Age</label>
+ <input type="number" required>
+
+ <br>
+
+ <label>Date of Birth</label>
+ <input type="date">
+
+ <br>
+
+ <label>Favorite Color</label>
+ <input type="color">
+
+ <br>
+
+ <label for="Name">Which Country:</label>
+ <select>
+     <option value="United States of America">United States of America</option>
+     <option value="Canada">Canada</option>
+     <option value="China">China</option>
+     <option value="South Korea">South Korea</option>
+     <option value="Vietnam">Vietnam</option>
+     <option value="Philippines">Philippines</option>
+ </select>
+</fieldset>
+
+
+<!--Your Indicators-->
+<fieldset>
+ <legend>Your Indicators</legend>
+
+ <label>Height:</label> <h4>Short</h4>
+ <input type="range" min="0" max="100"><h4>Tall</h4>
+
+ <br>
+
+ <label>Salary: </label> <h4>  Poor  </h4>&nbsp;
+ <input type="range" min="0" max="100"><h4>Rich</h4>
+
+</fieldset>
+
+
+<!--Your Contact Information-->
+<fieldset>
+  <legend>Your Contact Information</legend>
+
+  <label>Email:</label>
+  <input type="email" required>
+
+  <br>
+
+  <label>Mobile</label>
+  <input type="tel">
+
+  <br>
+
+  <label>Address</label>
+  <textarea></textarea>
+
+  <br>
+
+<p>
+  <label>Method to contact you:</label>
+  <input type="checkbox"> Email
+
+  <input type="checkbox"> Whatsapp
+
+  <input type="checkbox"> In App Chat
+</p>
+</fieldset>
+
+
+<!--Submit Button-->
+<input type="Submit"
+
+
+<!--Javascript-->
+<script>
+function readURL(input) {
+if (input.files && input.files[0]) {
+var reader = new FileReader();
+reader.onload = function (e) {
+$('#preview')
+.attr('src', e.target.result)
+
+.width(150)
+
+.height(200);
+};
+reader.readAsDataURL(input.files[0]);
+}
+}
+</script>
+</body>
+</html>
